@@ -9,7 +9,7 @@
                 <div class="col-md-6 doctor" v-for="(doctor, index) in doctors" :key="index">
                     <div class="doctor-card">
                         <div class="col-md-4 doctor-card-image-container">
-                            <img :src="`/src/assets/images/${doctor.pic}`" />
+                            <img :src="`../../src/assets/images/${doctor.pic}`" />
                         </div>
                         <div class="col-md-8">
                             <blockquote>
