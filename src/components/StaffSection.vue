@@ -5,11 +5,11 @@
                 <h3 class="heading">A Prima fogászat csapata</h3>
                 <div class="heading-underline"></div>
             </div>
-            <div class="row ">
-                <div class="col-md-6 doctor" v-for="(doctor, index) in doctors" :key="index">
+            <div class="staff-container row">
+                <div class="col-md-6 doctor-container" v-for="(doctor, index) in doctors" :key="index">
                     <div class="doctor-card">
                         <div class="col-md-4 doctor-card-image-container">
-                            <img :src="`../../src/assets/images/${doctor.pic}`" />
+                            <img :src="`../src/assets/images/${doctor.pic}`" />
                         </div>
                         <div class="col-md-8">
                             <blockquote>
@@ -60,8 +60,12 @@ export default {
     height: 3.7rem;
     margin-top: -3.7rem;
 }
-#stuff .narrow {
+.staff-container {
     width: 90%;
+    margin: auto;
+}
+.doctor-container {
+    margin: 2rem 0;
 }
 .doctor-card {
     height: 100%;
@@ -74,7 +78,7 @@ export default {
     justify-content: center;
     align-items: center;
 }
-.doctor img {
+.doctor-container img {
     display: block;
     width: 80%;
     border-radius: 50%;
