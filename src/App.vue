@@ -1,7 +1,7 @@
 <template>
   <main id="app">
-    <HeaderSection @change-locale="changeLocale"/>
-    <HomeSection  />
+    <HeaderSection @change-locale="changeLocale" />
+    <HomeSection />
     <IntroductionSection />
     <FeaturesSection />
     <ResourcesSection />
@@ -20,7 +20,6 @@ import ResourcesSection from './components/ResourcesSection.vue'
 import StaffSection from './components/StaffSection.vue'
 import ContactSection from './components/ContactSection.vue'
 import FooterSection from './components/FooterSection.vue'
-
 import { useI18n } from 'vue-i18n'
 
 export default {
@@ -37,7 +36,7 @@ export default {
   },
   setup() {
     const { t, locale, setLocale } = useI18n()
-    
+
     const changeLocale = (lang) => {
       locale._setter(lang)
     }
