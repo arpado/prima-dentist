@@ -4,9 +4,9 @@
       <div class="overlay"></div>
     </div>
     <div class="caption text-center">
-      <h1>Prima Fogászat</h1>
-      <h3>A fogászat, ahol nyugodtan hátradőlhet</h3>
-      <a href="#contact" class="btn btn-secondary btn-md">Vizsgálatra jeletkezem</a>
+      <h1>{{ $t('title') }}</h1>
+      <h3>{{ $t('text') }}</h3>
+      <a href="#contact" class="btn btn-secondary btn-md">{{ $t('button') }}</a>
     </div>
   </div>
 </template>
