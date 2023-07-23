@@ -12,6 +12,10 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collpase navbar-collapse" id="navbarResponsive">
+      <ul>
+        <li @click="$emit('changeLocale', 'en')">en</li>
+        <li @click="$emit('changeLocale', 'hu')">hu</li>
+      </ul>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
           <a href="#home" class="nav-link">CÍMLAP</a>
@@ -43,7 +47,8 @@
 </template>
 
 <script>
-export default {}
+export default {
+}
 </script>
 
 <style scoped>
