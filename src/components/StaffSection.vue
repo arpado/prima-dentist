@@ -1,106 +1,113 @@
 <template>
-   <div id="staff" class="offset">
-        <div class="jumbotron">
-            <div class="col-md-12 text-center">
-                <h3 class="heading">A Prima fogászat csapata</h3>
-                <div class="heading-underline"></div>
+  <div id="staff" class="offset">
+    <div class="jumbotron">
+      <div class="col-md-12 text-center">
+        <h3 class="heading">A Prima fogászat csapata</h3>
+        <div class="heading-underline"></div>
+      </div>
+      <div class="staff-container row">
+        <div class="col-md-6 doctor-container" v-for="(doctor, index) in doctors" :key="index">
+          <div class="doctor-card">
+            <div class="col-md-4 doctor-card-image-container">
+              <!-- <img :src="`@/assets/images/${doctor.pic}`" /> -->
+              <img :src="getPic(doctor.pic)" />
             </div>
-            <div class="staff-container row">
-                <div class="col-md-6 doctor-container" v-for="(doctor, index) in doctors" :key="index">
-                    <div class="doctor-card">
-                        <div class="col-md-4 doctor-card-image-container">
-                            <img :src="`../src/assets/images/${doctor.pic}`" />
-                        </div>
-                        <div class="col-md-8">
-                            <blockquote>
-                                <div>
-                                    <i class="fas fa-quote-left"></i>
-                                    <span>{{ doctor.text }}</span>
-                                </div>
-                                <div>
-                                    <hr class="doctor-hr" />
-                                    <cite>&#8212; {{ doctor.name }}, {{ doctor.title }}</cite>
-                                </div>
-                            </blockquote>
-                        </div>
-                    </div>
+            <div class="col-md-8">
+              <blockquote>
+                <div>
+                  <i class="fas fa-quote-left"></i>
+                  <span>{{ doctor.text }}</span>
                 </div>
+                <div>
+                  <hr class="doctor-hr" />
+                  <cite>&#8212; {{ doctor.name }}, {{ doctor.title }}</cite>
+                </div>
+              </blockquote>
             </div>
+          </div>
         </div>
-   </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
-    data() {
-        return {
-            doctors: [
-                {
-                    name: "Kis Pál",
-                    title: "Fogorvos",
-                    text: "Igyekszem odaadóan, lelkiismeretesen és precízen ellátni a rám bízott feladatokat.",
-                    pic: "client_4.jpg"
-                },
-                {
-                    name: "Kovács Anna",
-                    title: "Fogorvos",
-                    text: "Elkötelezett vagyok a kiemelkedő szintű fogászati ellátás nyújtásában",
-                    pic: "client_3.jpg"
-                },
-            ]
+  data() {
+    return {
+      doctors: [
+        {
+          name: 'Kis Pál',
+          title: 'Fogorvos',
+          text:
+            'Igyekszem odaadóan, lelkiismeretesen és precízen ellátni a rám bízott feladatokat.',
+          pic: 'client_4.jpg'
+        },
+        {
+          name: 'Kovács Anna',
+          title: 'Fogorvos',
+          text: 'Elkötelezett vagyok a kiemelkedő szintű fogászati ellátás nyújtásában',
+          pic: 'client_3.jpg'
         }
+      ]
     }
+  },
+  methods: {
+    getPic(pic) {
+      return `/src/assets/images/${pic}`
+    }
+  }
 }
 </script>
 
 <style scoped>
 #staff::before {
-    display: block;
-    content: "";
-    height: 3.7rem;
-    margin-top: -3.7rem;
+  display: block;
+  content: '';
+  height: 3.7rem;
+  margin-top: -3.7rem;
 }
 .staff-container {
-    width: 90%;
-    margin: auto;
+  width: 90%;
+  margin: auto;
 }
 .doctor-container {
-    margin: 2rem 0;
+  margin: 2rem 0;
 }
 .doctor-card {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .doctor-card-image-container {
-    min-width: 170px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  min-width: 170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .doctor-container img {
-    display: block;
-    width: 80%;
-    border-radius: 50%;
-    margin: auto;
+  display: block;
+  width: 80%;
+  border-radius: 50%;
+  margin: auto;
 }
 blockquote {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 blockquote .svg-inline--fa {
-    color: #79C7FF;
-    margin: 0.3rem;
+  color: #79c7ff;
+  margin: 0.3rem;
 }
 
 .doctor-hr {
-    border-top: 0.05rem solid #79C7FF;
+  border-top: 0.05rem solid #79c7ff;
 }
 @media (min-width: 500px) {
-    .doctor-card {
-        flex-direction: row;
-    }
+  .doctor-card {
+    flex-direction: row;
+  }
 }
 </style>
