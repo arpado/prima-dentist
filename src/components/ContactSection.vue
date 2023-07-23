@@ -1,5 +1,5 @@
 <template>
-  <div id="clients" class="offset">
+  <div id="contact" class="offset">
     <div class="jumbotron">
       <div class="col-md-12 text-center">
         <h3 class="heading">Itt találja Prima fogászat csapatát:</h3>
@@ -20,7 +20,7 @@
       <h3 class="heading">Online bejelentkezés</h3>
       <div class="heading-underline"></div>
       <div class="col-md-12 narrow text-center">
-        <form @submit.prevent="submit" @reset="onReset">
+        <form @submit.prevent="sendMessage" @reset="onReset">
           <div class="form-unit">
             <label for="name-field">Név: </label>
             <input id="name-field" placeholder="Kérjük töltse ki ezt a mezőt!" v-model="name" />
@@ -41,25 +41,81 @@
             ></textarea>
           </div>
 
-          <button type="reset" class="submit-btn btn btn-secondary btn-md">Küldés</button>
+          <button type="submit" class="submit-btn btn btn-secondary btn-md">Küldés</button>
         </form>
       </div>
     </div>
   </div>
 </template>
+
 <script>
+import { toast } from 'vue3-toastify';
+import 'vue3-toastify/dist/index.css';
+
 export default {
   name: 'clients',
   data() {
     return {
       name: '',
       email: '',
-      message: ''
+      message: '',
+    }
+  },
+  methods: {
+    async sendMessage() {
+      const toastID = await toast.loading("Please wait...");
+
+      if(this.name === '' || this.email === '' || this.message === '') {
+
+        await setTimeout(() => {
+          toast.remove(toastID)
+        }, 1000);
+
+        toast.error("Please fill out all the fields.");
+
+        return
+      }
+
+      const response = await fetch(
+        "https://formsubmit.co/ajax/2504b17c1cdcf59e3fd818d8e727da33",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            name: this.name,
+            email: this.email,
+            message: this.message,
+            // _replyto: this.email,
+            // _cc: '',
+            // _bcc: '',
+            // _template: 'table',
+          }),
+        }
+      );
+
+      if (response.ok) {
+        setTimeout(() => {
+          toast.remove(toastID)
+        }, 1000);
+        toast.success("Email sent!", {
+          delay: 400,
+        });
+        this.name = this.email = this.message = "";
+      } else {
+        setTimeout(() => {
+          toast.remove(toastID)
+        }, 1000);
+        toast.error("Failed to send email.");
+      }
     }
   }
 }
 </script>
-<style>
+
+<style scoped>
 #clients::before {
   display: block;
   content: '';
