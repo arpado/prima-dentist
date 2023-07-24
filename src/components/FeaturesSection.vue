@@ -6,16 +6,16 @@
                     <h3 class="heading">Szolgátatásaink</h3>
                     <div class="heading-underline"></div>
                 </div>
-                <div class="row text-center">
-                    <div class="col-md-4" v-for="(feature, index) in features" :key="index">
-                        <div class="feature">
+                <div class="row text-center" ref="featureContainer">
+                    <div class="col-md-4 feature" v-for="(feature, index) in features" :key="index" ref="features">
+                        <!-- <div class=""> -->
                             <i
                                 :class="feature.iconClassList"
                                 :data-fa-transform="feature.dataFaTransform"
                             ></i>
                             <h3>{{ feature.title }}</h3>
                             <p>{{ feature.text }}</p>
-                        </div>
+                        <!-- </div> -->
                     </div>                    
                 </div>
             </div>
@@ -23,6 +23,8 @@
     </div>
 </template>
 <script>
+import { animate, inView } from 'motion'
+
 export default {
     name: "features",
     data() {
@@ -48,7 +50,18 @@ export default {
                 },
             ]
         }
-    }
+    },
+    mounted() {
+        const stop = inView(this.$refs.featureContainer, () => {
+            this.$refs.features.forEach((feature, index) => {
+                animate(feature, {opacity: [0, 1]}, {duration: 2, delay: index})
+            })
+        },
+        {margin: "0% 0px -50% 0px"})
+    },
+    beforeUnmount() {
+        stop()
+    },
 };
 </script>
 <style scoped>
@@ -65,6 +78,7 @@ export default {
     display: grid;
     grid-template-rows: 120px 70px 1fr;
     text-align: center;
+    opacity: 0;
 }
 .feature > svg {
     margin: auto;

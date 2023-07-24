@@ -4,18 +4,23 @@
       <div class="overlay"></div>
     </div>
     <div class="caption text-center">
-      <h1>{{ $t('title') }}</h1>
-      <h3>{{ $t('text') }}</h3>
-      <a href="#contact" class="btn btn-secondary btn-md">{{ $t('button') }}</a>
+      <h1 ref="title">{{ $t('title') }}</h1>
+      <h3 ref="subtitle">{{ $t('text') }}</h3>
+      <a ref="applicationButton" href="#contact" class="btn btn-secondary btn-md">{{ $t('button') }}</a>
     </div>
   </div>
 </template>
 
 <script>
+import { animate } from "motion";
+
 export default {
   name: 'home',
   mounted() {
-    location.href = '/#home'
+    location.href = '/#home' // ???
+    animate(this.$refs.title, {opacity: [0, 1]},  { duration: 2 })
+    animate(this.$refs.subtitle, {opacity: [0, 1]},  { duration: 2, delay: 1 })
+    animate(this.$refs.applicationButton, {opacity: [0, 1]},  { duration: 2, delay: 2 })
   }
 }
 </script>

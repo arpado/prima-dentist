@@ -5,8 +5,8 @@
         <h3 class="heading">A Prima fogászat csapata</h3>
         <div class="heading-underline"></div>
       </div>
-      <div class="staff-container row">
-        <div class="col-md-6 doctor-container" v-for="(doctor, index) in doctors" :key="index">
+      <div class="staff-container row" ref="staffContainer">
+        <div class="col-md-6 doctor-container" v-for="(doctor, index) in doctors" :key="index" ref="staffBlocks">
           <div class="doctor-card">
             <div class="col-md-4 doctor-card-image-container">
               <!-- <img :src="`@/assets/images/${doctor.pic}`" /> -->
@@ -32,6 +32,8 @@
 </template>
 
 <script>
+import { animate, inView } from 'motion'
+
 export default {
   data() {
     return {
@@ -56,7 +58,21 @@ export default {
     getPic(pic) {
       return `/src/assets/images/${pic}`
     }
-  }
+  },
+  mounted() {
+    const stop = inView(
+      this.$refs.staffContainer,
+      () => {
+        this.$refs.staffBlocks.forEach((elem, index) => {
+          animate(elem, { opacity: [0, 1] }, { duration: 2, delay: index })
+        })
+      },
+      { margin: '0px 0px -50% 0px' }
+    )
+  },
+  beforeUnmount() {
+    stop()
+  },
 }
 </script>
 
@@ -73,6 +89,7 @@ export default {
 }
 .doctor-container {
   margin: 2rem 0;
+  opacity: 0;
 }
 .doctor-card {
   height: 100%;

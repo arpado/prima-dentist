@@ -1,6 +1,6 @@
 <template>
     <div id="introduction" class="offset">
-        <div class="textbox text-center">
+        <div class="textbox text-center" ref="introductionBody">
             <!-- col-md-12 -->
             <h2>PRIMA FOGÁSZATI ÉS FOGSZABÁLYOZÁSI RENDELŐ</h2>
             <div class="heading-underline"></div>
@@ -13,8 +13,20 @@ Tapasztalt, magas szinten képzett fogorvos csapatunk várja fogászati rendelő
 </template>
 
 <script>
+import { animate, inView } from "motion";
+
 export default {
-    name: "introduction"
+    name: "introduction",
+    mounted() {
+        const stop = inView(this.$refs.introductionBody, () => {
+            animate(this.$refs.introductionBody, { opacity: [0, 1] }, { duration: 2 })
+        },
+        {margin: "0% 0px -50% 0px"})
+    },
+    beforeUnmount() {
+        console.log('unmounting')
+        stop()
+    }
 };
 </script>
 
@@ -23,6 +35,7 @@ export default {
     margin: 1.5rem auto;
     max-width: 1024px;
     padding: 4rem max(1rem, 5%);
+    opacity: 0;
 }
 .textbox > a {
     margin-top: 3rem;
