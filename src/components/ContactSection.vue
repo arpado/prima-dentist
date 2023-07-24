@@ -49,8 +49,8 @@
 </template>
 
 <script>
-import { toast } from 'vue3-toastify';
-import 'vue3-toastify/dist/index.css';
+import { toast } from 'vue3-toastify'
+import 'vue3-toastify/dist/index.css'
 
 export default {
   name: 'clients',
@@ -58,58 +58,48 @@ export default {
     return {
       name: '',
       email: '',
-      message: '',
+      message: ''
     }
   },
   methods: {
     async sendMessage() {
-      const toastID = await toast.loading("Please wait...");
-
-      if(this.name === '' || this.email === '' || this.message === '') {
-
-        await setTimeout(() => {
-          toast.remove(toastID)
-        }, 1000);
-
-        toast.error("Please fill out all the fields.");
-
+      if (this.name === '' || this.email === '' || this.message === '') {
+        toast.error('Please fill out all the fields.')
         return
       }
 
-      const response = await fetch(
-        "https://formsubmit.co/ajax/2504b17c1cdcf59e3fd818d8e727da33",
-        {
-          method: "POST",
+      const response = await toast.promise(
+        fetch('https://formsubmit.co/ajax/2504b17c1cdcf59e3fd818d8e727da33', {
+          method: 'POST',
           headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
+            'Content-Type': 'application/json',
+            Accept: 'application/json'
           },
           body: JSON.stringify({
             name: this.name,
             email: this.email,
-            message: this.message,
+            message: this.message
             // _replyto: this.email,
             // _cc: '',
             // _bcc: '',
             // _template: 'table',
-          }),
+          })
+        }),
+        {
+          pending: 'Sending message...',
+          success: {
+            render(res) {
+              return 'Message Sent Successfully!' // + res.data.message
+            }
+          },
+          error: {
+            render(err) {
+              return `Failed to Send Message! Error: ${err.data.message}!`
+            }
+          }
         }
-      );
-
-      if (response.ok) {
-        setTimeout(() => {
-          toast.remove(toastID)
-        }, 1000);
-        toast.success("Email sent!", {
-          delay: 400,
-        });
-        this.name = this.email = this.message = "";
-      } else {
-        setTimeout(() => {
-          toast.remove(toastID)
-        }, 1000);
-        toast.error("Failed to send email.");
-      }
+      )
+      this.name = this.email = this.message = ''
     }
   }
 }
