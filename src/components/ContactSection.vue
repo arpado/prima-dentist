@@ -16,10 +16,10 @@
         width="100%"
       ></iframe>
     </div>
-    <div class="col-md-12 narrow text-center">
+    <div class="col-md-12 text-center">
       <h3 class="heading">Online bejelentkezés</h3>
       <div class="heading-underline"></div>
-      <div class="col-md-12 narrow text-center">
+      <div class="col-md-12 text-center">
         <form @submit.prevent="sendMessage" @reset="onReset">
           <div class="form-unit">
             <label for="name-field">Név: </label>
@@ -106,18 +106,19 @@ export default {
 </script>
 
 <style scoped>
-#clients::before {
+#contact {
+  overflow-x: clip;
+}
+#contact::before {
   display: block;
   content: '';
   height: 3.7rem;
   margin-top: -3.7rem;
 }
-
-#clients .jumbotron {
+#contact .jumbotron {
   padding-bottom: 0;
 }
-
-#clients .narrow {
+#contact .narrow {
   width: 90%;
 }
 form {
