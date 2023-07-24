@@ -12,10 +12,6 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collpase navbar-collapse" id="navbarResponsive">
-      <ul>
-        <li @click="$emit('changeLocale', 'en')">en</li>
-        <li @click="$emit('changeLocale', 'hu')">hu</li>
-      </ul>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
           <a href="#home" class="nav-link">CÍMLAP</a>
@@ -24,30 +20,43 @@
           <a href="#introduction" class="nav-link">Rólunk</a>
         </li>
         <li class="nav-item">
-          <a href="#courses" class="nav-link">Szolgáltatások</a>
+          <a href="#features" class="nav-link">Ajánlatunk</a>
         </li>
-        <!-- <li class="nav-item">
-                        <a href="#courses"  class="nav-link">Courses</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#features"  class="nav-link">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#resouces"  class="nav-link">Resouces</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#clients"  class="nav-link">Clients</a>
-                    </li> -->
+        <li class="nav-item">
+          <a href="#resouces" class="nav-link">Szolgáltatások</a>
+        </li>
+        <li class="nav-item">
+          <a href="#staff" class="nav-link">Munkatársaink</a>
+        </li>
         <li class="nav-item">
           <a href="#contact" class="nav-link">Kapcsolat</a>
         </li>
       </ul>
+      <div class="language-selector">
+        <label for="lang-select">Language:</label>
+        <select
+          name=""
+          id="lang-select"
+          v-model="selectedLang"
+          @change="$emit('changeLocale', selectedLang)"
+        >
+          <option value="en">English</option>
+          <option value="de">Deutsch</option>
+          <option value="da">Dansk</option>
+          <option value="hu">Magyar</option>
+        </select>
+      </div>
     </div>
   </nav>
 </template>
 
 <script>
 export default {
+  data() {
+    return {
+      selectedLang: 'en'
+    }
+  }
 }
 </script>
 
@@ -88,5 +97,12 @@ export default {
 .navbar .navbar-nav .nav-link:hover {
   color: #79c7ff;
   cursor: pointer;
+}
+.language-selector {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding-right: 0.5rem;
+  margin-top: 0.5rem;
 }
 </style>
