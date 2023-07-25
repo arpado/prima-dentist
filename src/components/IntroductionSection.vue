@@ -1,43 +1,74 @@
 <template>
-    <div id="introduction" class="offset">
-        <div class="textbox text-center" ref="introductionBody">
-            <!-- col-md-12 -->
-            <h2>PRIMA FOGÁSZATI ÉS FOGSZABÁLYOZÁSI RENDELŐ</h2>
-            <div class="heading-underline"></div>
-            <br>
-            <p class="lead">
-Tapasztalt, magas szinten képzett fogorvos csapatunk várja fogászati rendelőnkben Szegeden, a liget szomszédságában. Fogorvosi rendelőnk teljeskörő fogászati ellátást kínál: általános és esztétikai fogászati kezelések mellett fogszabályozás és szájsebészeti beavatkozások (fogbeültetés, bölcsességfog eltávolítás) terén is. A fogorvosi kezeléseket kizárólag prémium fogászati anyagok felhasználásával, a lehető legmodernebb fogorvosi eszközökkel végezzük. Fogorvosi rendelőnk csapatának minden tagjára igaz, hogy számunkra a fogorvosi ellátás biztosítása nem csupán egy munka, hanem hivatás is. Célunk, hogy minden páciensünk elégedetten, magabiztos mosollyal távozzon tőlünk. Egy Fogászat Szegeden, ahol problémáját gyorsan, fájdalommentesen és magas szakmai színvonalon orvosolják.</p>
-            <a href="#contact" class="btn btn-secondary btn-md">Vizsgálatra jeletkezem</a>
-        </div>
+  <div id="introduction" class="offset">
+    <div class="textbox text-center" ref="introductionBody">
+      <!-- col-md-12 -->
+      <h2>PRIMA FOGÁSZATI ÉS FOGSZABÁLYOZÁSI RENDELŐ</h2>
+      <div class="heading-underline"></div>
+      <br />
+      <p>
+        Tapasztalt, magas szinten képzett fogorvos csapatunk várja fogászati rendelőnkben Szegeden,
+        a liget szomszédságában. Fogorvosi rendelőnk teljeskörő fogászati ellátást kínál: általános
+        és esztétikai fogászati kezelések mellett fogszabályozás és szájsebészeti beavatkozások
+        (fogbeültetés, bölcsességfog eltávolítás) terén is. A fogorvosi kezeléseket kizárólag
+        prémium fogászati anyagok felhasználásával, a lehető legmodernebb fogorvosi eszközökkel
+        végezzük. Fogorvosi rendelőnk csapatának minden tagjára igaz, hogy számunkra a fogorvosi
+        ellátás biztosítása nem csupán egy munka, hanem hivatás is. Célunk, hogy minden páciensünk
+        elégedetten, magabiztos mosollyal távozzon tőlünk. Egy Fogászat Szegeden, ahol problémáját
+        gyorsan, fájdalommentesen és magas szakmai színvonalon orvosolják.
+      </p>
+      <a href="#contact" class="btn btn-secondary btn-md">Vizsgálatra jeletkezem</a>
     </div>
+  </div>
 </template>
 
 <script>
-import { animate, inView } from "motion";
+import { animate, inView } from 'motion'
 
 export default {
-    name: "introduction",
-    mounted() {
-        const stop = inView(this.$refs.introductionBody, () => {
-            animate(this.$refs.introductionBody, { opacity: [0, 1] }, { duration: 2 })
-        },
-        {margin: "0% 0px -50% 0px"})
-    },
-    beforeUnmount() {
-        console.log('unmounting')
-        stop()
-    }
-};
+  name: 'introduction',
+  mounted() {
+    const stop = inView(
+      this.$refs.introductionBody,
+      () => {
+        animate(this.$refs.introductionBody, { opacity: [0, 1] }, { duration: 2 })
+      },
+      { margin: '0% 0px -50% 0px' }
+    )
+  },
+  beforeUnmount() {
+    stop()
+  }
+}
 </script>
 
 <style scoped>
 .textbox {
-    margin: 1.5rem auto;
-    max-width: 1024px;
-    padding: 4rem max(1rem, 5%);
-    opacity: 0;
+  margin: 1.5rem auto;
+  max-width: 1024px;
+  padding: 4rem max(1rem, 5%);
+  opacity: 0;
+}
+.textbox h2 {
+  font-size: var(--font-title-l);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.textbox p {
+  font-size: var(--font-text-md);
 }
 .textbox > a {
-    margin-top: 3rem;
+  margin-top: 3rem;
+  font-size: var(--font-text-l);
+}
+@media (min-width: 375px) {
+  .textbox h2 {
+    font-size: var(--font-title-xl);
+  }
+  .textbox p {
+    font-size: var(--font-text-l);
+  }
+  .textbox > a {
+  font-size: var(--font-text-l);
+}
 }
 </style>

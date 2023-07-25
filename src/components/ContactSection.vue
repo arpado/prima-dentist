@@ -2,21 +2,33 @@
   <div id="contact" class="offset">
     <div class="jumbotron">
       <div class="col-md-12 text-center">
-        <h3 class="heading">Itt találja Prima fogászat csapatát:</h3>
+        <h3 class="heading">Elérhetőségeink:</h3>
         <div class="heading-underline"></div>
       </div>
-      <iframe
-        allowfullscreen=""
-        aria-hidden="false"
-        frameborder="0"
-        height="600"
-        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2457.9970327219767!2d20.159241048239483!3d46.250062633888895!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe476cb973a27eef7!2sLiget%20Fog%C3%A1szati%20%C3%A9s%20Fogszab%C3%A1lyoz%C3%A1si%20Rendel%C5%91%20-%20Dr.%20V%C3%B6r%C3%B6s%20Laura%20Fogorvos%20Szeged!5e0!3m2!1sen!2shu!4v1604252891137!5m2!1sen!2shu"
-        style="border: 0"
-        tabindex="0"
-        width="100%"
-      ></iframe>
+      <div class="contacts-container">
+        <div class="contacts-section">
+          <div>
+            <p>Email:<br/>email@email.com</p>
+            <p>Telefon:<br/>0000-0000</p>
+          </div>
+          <div>
+            <p>Cim:<br/>Kital'lt utca 3.,<br />1200<br />Syeged, Hungary</p>
+          </div>
+        </div>
+        <iframe
+          allowfullscreen=""
+          aria-hidden="false"
+          frameborder="0"
+          height="600"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2457.9970327219767!2d20.159241048239483!3d46.250062633888895!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe476cb973a27eef7!2sLiget%20Fog%C3%A1szati%20%C3%A9s%20Fogszab%C3%A1lyoz%C3%A1si%20Rendel%C5%91%20-%20Dr.%20V%C3%B6r%C3%B6s%20Laura%20Fogorvos%20Szeged!5e0!3m2!1sen!2shu!4v1604252891137!5m2!1sen!2shu"
+          style="border: 0"
+          tabindex="0"
+          width="100%"
+          class="google-map"
+        ></iframe>
+      </div>
     </div>
-    <div class="col-md-12 text-center">
+    <div class="form-section col-md-12 text-center">
       <h3 class="heading">Online bejelentkezés</h3>
       <div class="heading-underline"></div>
       <div class="col-md-12 text-center">
@@ -116,10 +128,40 @@ export default {
   margin-top: -3.7rem;
 }
 #contact .jumbotron {
-  padding-bottom: 0;
+  padding: 0 2rem;
 }
 #contact .narrow {
   width: 90%;
+}
+.heading {
+  font-size: var(--font-title-md);
+}
+.contacts-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.contacts-container > div {
+  flex-basis: auto;
+}
+.contacts-section {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  font-size: var(--font-text-md);
+  margin: 2rem auto;
+}
+.contacts-section > div {
+  width: 250px;
+}
+.contacts-section p {
+  font-weight: bolder;
+}
+.google-map {
+  margin: 2rem auto;
+}
+.form-section {
+  margin: 4rem auto;
 }
 form {
   max-width: 500px;
@@ -140,6 +182,7 @@ form textarea {
   width: 100%;
 }
 form label {
+  font-size: var(--font-text-md);
   font-weight: bold;
 }
 form input,
@@ -150,5 +193,23 @@ form textarea {
 }
 .submit-btn {
   margin: 1rem auto;
+}
+@media (min-width: 768px) {
+  .heading {
+    font-size: var(--font-title-l);
+  }
+  .contacts-container {
+    flex-direction: row;
+  }
+  .contacts-container > .contacts-section,
+  .contacts-container > iframe {
+    flex-basis: 50%;
+  }
+  .contacts-section {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--font-text-l)
+  }
 }
 </style>

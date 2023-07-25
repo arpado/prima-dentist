@@ -35,6 +35,20 @@
 
   --section-gap: 160px;
 }
+:root {
+  --font-title-xxl: 3.8rem;
+  --font-title-xl: 2rem;
+  --font-title-l: 1.75rem;
+  --font-title-md: 1.5rem;
+  --font-title-sm: 1rem;
+
+  --font-text-xxl: 1.75rem;
+  --font-text-xl: 1.5rem;
+  --font-text-l: 1.25rem;
+  --font-text-md: 1rem;
+  --font-text-sm: 0.75rem;
+  --font-text-xs: 0.5rem;
+}
 
 @media (prefers-color-scheme: dark) {
   :root {

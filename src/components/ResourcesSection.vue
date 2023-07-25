@@ -9,7 +9,7 @@
         <div class="resource col-md-4" v-for="(resource, index) in resources" :key="index" ref="resourceBlocks">
           <h3>{{ resource.title }}</h3>
           <i :class="resource.iconClassList"></i>
-          <p class="lead">{{ resource.text }}</p>
+          <p>{{ resource.text }}</p>
         </div>
       </div>
       <div class="overlay"></div>
@@ -91,16 +91,37 @@ export default {
   max-width: 1200px;
   margin: auto;
   row-gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+.heading {
+  font-size: var(--font-title-md);
+  font-weight: bold;
+  text-transform: uppercase;
 }
 .resource {
   display: grid;
   grid-template-rows: 70px 120px 1fr;
   text-align: center;
   opacity: 0;
+  padding: 2rem 0;
 }
-.resource > svg,
-.resource > h3 {
+.resource h3 {
+  font-size: var(--font-title-md);
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-bottom: 0.4rem;
+}
+.resource p {
+  font-size: 1.1rem;
+}
+.resource > svg {
   margin: auto;
   color: lightblue;
+}
+@media (min-width: 375px) {
+  .heading {
+    font-size: var(--font-title-xl);
+  }
 }
 </style>

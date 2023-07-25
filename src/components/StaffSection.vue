@@ -6,7 +6,12 @@
         <div class="heading-underline"></div>
       </div>
       <div class="staff-container row" ref="staffContainer">
-        <div class="col-md-6 doctor-container" v-for="(doctor, index) in doctors" :key="index" ref="staffBlocks">
+        <div
+          class="col-md-6 doctor-container"
+          v-for="(doctor, index) in doctors"
+          :key="index"
+          ref="staffBlocks"
+        >
           <div class="doctor-card">
             <div class="col-md-4 doctor-card-image-container">
               <!-- <img :src="`@/assets/images/${doctor.pic}`" /> -->
@@ -16,7 +21,7 @@
               <blockquote>
                 <div>
                   <i class="fas fa-quote-left"></i>
-                  <span>{{ doctor.text }}</span>
+                  <span class="testimony">{{ doctor.text }}</span>
                 </div>
                 <div>
                   <hr class="doctor-hr" />
@@ -72,7 +77,7 @@ export default {
   },
   beforeUnmount() {
     stop()
-  },
+  }
 }
 </script>
 
@@ -118,6 +123,9 @@ blockquote .svg-inline--fa {
   color: #79c7ff;
   margin: 0.3rem;
 }
+.testimony {
+  font-size: var(--font-text-md);
+}
 
 .doctor-hr {
   border-top: 0.05rem solid #79c7ff;
@@ -125,6 +133,9 @@ blockquote .svg-inline--fa {
 @media (min-width: 500px) {
   .doctor-card {
     flex-direction: row;
+  }
+  .testimony {
+    font-size: var(--font-text-l);
   }
 }
 </style>
