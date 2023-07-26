@@ -2,7 +2,7 @@
   <div id="staff" class="offset">
     <div class="jumbotron">
       <div class="col-md-12 text-center">
-        <h3 class="heading">A Prima fogászat csapata</h3>
+        <h3 class="heading">{{ $t('staff.title') }}</h3>
         <div class="heading-underline"></div>
       </div>
       <div class="staff-container row" ref="staffContainer">
@@ -21,11 +21,11 @@
               <blockquote>
                 <div>
                   <i class="fas fa-quote-left"></i>
-                  <span class="testimony">{{ doctor.text }}</span>
+                  <span class="testimony">{{ $t(doctor.text) }}</span>
                 </div>
                 <div>
                   <hr class="doctor-hr" />
-                  <cite>&#8212; {{ doctor.name }}, {{ doctor.title }}</cite>
+                  <cite>&#8212; {{ $t(doctor.name) }}, {{ $t(doctor.title) }}</cite>
                 </div>
               </blockquote>
             </div>
@@ -44,16 +44,15 @@ export default {
     return {
       doctors: [
         {
-          name: 'Kis Pál',
-          title: 'Fogorvos',
-          text:
-            'Igyekszem odaadóan, lelkiismeretesen és precízen ellátni a rám bízott feladatokat.',
+          name: 'staff.doctor1.name',
+          title: 'staff.doctor1.title',
+          text: 'staff.doctor1.text',
           pic: 'client_4.jpg'
         },
         {
-          name: 'Kovács Anna',
-          title: 'Fogorvos',
-          text: 'Elkötelezett vagyok a kiemelkedő szintű fogászati ellátás nyújtásában',
+          name: 'staff.doctor2.name',
+          title: 'staff.doctor2.title',
+          text: 'staff.doctor2.text',
           pic: 'client_3.jpg'
         }
       ]

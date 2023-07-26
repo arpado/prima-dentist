@@ -9,11 +9,11 @@
                         solutions that represent everything your business needs
                         to compete in the modern marketplace.
                     </p> -->
-          <strong class="subtitle">Contact Info.</strong>
-          <p>(000) 000-0000<br />email@email.com</p>
+          <strong class="subtitle">{{ $t('contacts.title1') }}</strong>
+          <p>{{ $t('contacts.telephone.value') }}<br />{{ $t('contacts.email.value') }}</p>
         </div>
         <div class="col-md-5 text-center">
-          <strong class="subtitle">Find Us On:</strong>
+          <strong class="subtitle">{{ $t('footer.findUs') }}:</strong>
           <br />
           <a href="#"><i class="fab fa-facebook-square fa-3x"></i></a>
           <a href="#"><i class="fab fa-twitter-square fa-3x"></i></a>
@@ -21,7 +21,7 @@
         </div>
       </div>
       <hr class="footer-hr" />
-      <p class="text-center">Arculattervezés, honlaptervezés: JoMagam &copy; 2022</p>
+      <p class="text-center">{{ $t('footer.madeBy') }}</p>
     </footer>
   </div>
 </template>

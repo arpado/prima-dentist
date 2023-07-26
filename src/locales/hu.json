@@ -1,5 +1,92 @@
 {
-    "title": "Prima Fogászat",
-    "text": "A fogászat, ahol nyugodtan hátradőlhet",
-    "button": "Vizsgálatra jeletkezem"
+    "navbar": {
+        "home": "Címlap",
+        "aboutUs": "Rólunk",
+        "services": "Szolgáltatások",
+        "staff": "Munkatársaink",
+        "contacts": "Kapcsolat"
+    },
+    "home": {
+        "title": "Prima Fogászat",
+        "text": "A fogászat, ahol nyugodtan hátradőlhet",
+        "button": "Vizsgálatra jeletkezem"
+    },
+    "introduction": {
+        "title": "PRIMA FOGÁSZATI ÉS FOGSZABÁLYOZÁSI RENDELŐ",
+        "text": "Tapasztalt, magas szinten képzett fogorvos csapatunk várja fogászati rendelőnkben Szegeden,a liget szomszédságában. Fogorvosi rendelőnk teljeskörő fogászati ellátást kínál: általánosés esztétikai fogászati kezelések mellett fogszabályozás és szájsebészeti beavatkozások(fogbeültetés, bölcsességfog eltávolítás) terén is. A fogorvosi kezeléseket kizárólagprémium fogászati anyagok felhasználásával, a lehető legmodernebb fogorvosi eszközökkelvégezzük. Fogorvosi rendelőnk csapatának minden tagjára igaz, hogy számunkra a fogorvosiellátás biztosítása nem csupán egy munka, hanem hivatás is. Célunk, hogy minden páciensünkelégedetten, magabiztos mosollyal távozzon tőlünk. Egy Fogászat Szegeden, ahol problémájátgyorsan, fájdalommentesen és magas szakmai színvonalon orvosolják.",
+        "button": "Vizsgálatra jeletkezem"
+    },
+    "features": {
+        "title": "Szolgátatásaink",
+        "item1": {
+            "title": "Fogmegtartó kezelések",
+            "text": "Fogmegtartó kezeléseink során a fájdalom megszüntetetésén túl mindent elkövetünk, hogy fogait még hosszú évekig gond nélkül tudja használni."
+        },
+        "item2": {
+            "title": "Fogpótlások",
+            "text": "A fogpótlásokkal - legyen az akár híd, korona, kivehető fogsor vagy implantátum-, visszaadjuk önbizalmát és nem utolsó sorban rágóképességét."
+        },
+        "item3": {
+            "title": "Esztétikai beavatkozás",
+            "text": "Nem csak ép, de gyökérkezelt fogak fehérítését is elvégezzük, illetve orvosi hozzáértéssel helyezzük fel a páciens által választott fogékszereket is."
+        }
+    },
+    "resources": {
+        "title": "Miért válasszon minket?",
+        "item1": {
+            "title": "Bizonyítékokon alapuló fogorvoslás",
+            "text": "A fogászati ellátást nem lehet kizárólag a fogorvos egyéni tapasztalatára építeni, hanem elengedhetetlen a folyamatos tanulás és a rendelkezésre álló legfrisseb fogászati kutatások naprakész ismerete."
+        },
+        "item2": {
+            "title": "Teljeskörű tájékoztatás",
+            "text": "Röntgenfelvételek és -ha szükséges- arc- és szájüregi fotók, valamint lenyomatok alapján komplex kezelési tervet készítünk és mindenre kiterjedő, részletes tájékoztatást nyújtunk a lehetséges fogorvosi kezelések menetére, árára vonatkozóan."
+        },
+        "item3": {
+            "title": "Bizonyítékokon alapuló fogorvoslás",
+            "text": "A fogászati ellátást nem lehet kizárólag a fogorvos egyéni tapasztalatára építeni, hanem elengedhetetlen a folyamatos tanulás és a rendelkezésre álló legfrisseb fogászati kutatások naprakész ismerete."
+        } 
+    },
+    "staff": {
+        "title": "A Prima fogászat csapata",
+        "doctor1": {
+            "name": "Kis Pál",
+            "title": "Fogorvos",
+            "text": "Igyekszem odaadóan, lelkiismeretesen és precízen ellátni a rám bízott feladatokat."
+        },
+        "doctor2": {
+            "name": "Kovács Anna",
+            "title": "Fogorvos",
+            "text": "Elkötelezett vagyok a kiemelkedő szintű fogászati ellátás nyújtásában."
+        }
+    },
+    "contacts": {
+        "title1": "Elérhetőségeink",
+        "email": {
+            "label": "Email",
+            "value": "email(kukac)email.com"
+        },
+        "telephone": {
+            "label": "Telefon",
+            "value": "(000) 000-0000"
+        },
+        "address": {
+            "label": "Cim",
+            "street": "Kitalált utca 3.",
+            "postCode": "1200",
+            "city": "Szeged",
+            "country": "Magyarország"
+        },
+        "title2": "Online bejelentkezés",
+        "form": {
+            "name": "Név",
+            "email": "Az Ön Emailcíme",
+            "message": "Üzenet",
+            "placeholder": "Kérjük töltse ki ezt a mezőt!",
+            "button": "Üzenet küldése"
+        }
+    },
+    "footer": {
+        "findUs": "Megtalál bennünket",
+        "madeBy": "Arculattervezés, honlaptervezés: JoMagam &copy; 2022"
+    }
 }

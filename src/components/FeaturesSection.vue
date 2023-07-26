@@ -3,7 +3,7 @@
     <div class="jumbotron">
       <!-- <div class="text-center"> -->
       <div class="col-md-12 text-center">
-        <h2 class="heading">Szolgátatásaink</h2>
+        <h2 class="heading">{{ $t('features.title') }}</h2>
         <div class="heading-underline"></div>
       </div>
       <div class="feature-container row text-center" ref="featureContainer">
@@ -15,8 +15,8 @@
         >
           <!-- <div class=""> -->
           <i :class="feature.iconClassList" :data-fa-transform="feature.dataFaTransform"></i>
-          <h3>{{ feature.title }}</h3>
-          <p>{{ feature.text }}</p>
+          <h3>{{ $t(feature.title) }}</h3>
+          <p>{{ $t(feature.text) }}</p>
           <!-- </div> -->
         </div>
       </div>
@@ -33,23 +33,20 @@ export default {
     return {
       features: [
         {
-          title: 'Fogmegtartó kezelések',
-          text:
-            'Fogmegtartó kezeléseink során a fájdalom megszüntetetésén túl mindent elkövetünk, hogy fogait még hosszú évekig gond nélkül tudja használni.',
+          title: 'features.item1.title',
+          text: 'features.item1.text',
           iconClassList: 'fas fas fa-star fa-4x',
           dataFaTransform: 'shrink-4.5 up-4.5'
         },
         {
-          title: 'Fogpótlások',
-          text:
-            'A fogpótlásokkal - legyen az akár híd, korona, kivehető fogsor vagy implantátum-, visszaadjuk önbizalmát és nem utolsó sorban rágóképességét',
+          title: 'features.item2.title',
+          text: 'features.item1.text',
           iconClassList: 'fas fa-smile fa-4x',
           dataFaTransform: 'shrink-4.5 up-4.5'
         },
         {
-          title: 'Esztétikai beavatkozás',
-          text:
-            'Nem csak ép, de gyökérkezelt fogak fehérítését is elvégezzük, illetve orvosi hozzáértéssel helyezzük fel a páciens által választott fogékszereket is.',
+          title: 'features.item3.title',
+          text: 'features.item1.text',
           iconClassList: 'fas fa-syringe fa-4x',
           dataFaTransform: 'shrink-4 up-5'
         }

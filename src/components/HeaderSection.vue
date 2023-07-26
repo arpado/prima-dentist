@@ -13,23 +13,8 @@
     </button>
     <div class="collpase navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a href="#home" class="nav-link">CÍMLAP</a>
-        </li>
-        <li class="nav-item">
-          <a href="#introduction" class="nav-link">Rólunk</a>
-        </li>
-        <li class="nav-item">
-          <a href="#features" class="nav-link">Ajánlatunk</a>
-        </li>
-        <li class="nav-item">
-          <a href="#resouces" class="nav-link">Szolgáltatások</a>
-        </li>
-        <li class="nav-item">
-          <a href="#staff" class="nav-link">Munkatársaink</a>
-        </li>
-        <li class="nav-item">
-          <a href="#contact" class="nav-link">Kapcsolat</a>
+        <li class="nav-item" v-for="(link, index) in links" :key="index">
+          <a :href="link.href" class="nav-link">{{ $t(link.name) }}</a>
         </li>
       </ul>
       <div class="language-selector">
@@ -54,6 +39,28 @@
 export default {
   data() {
     return {
+      links: [
+        {
+          name: 'navbar.home',
+          href: '#home'
+        },
+        {
+          name: 'navbar.aboutUs',
+          href: '#introduction'
+        },
+        {
+          name: 'navbar.services',
+          href: '#features'
+        },
+        {
+          name: 'navbar.staff',
+          href: '#staff'
+        },
+        {
+          name: 'navbar.contacts',
+          href: '#contact'
+        },
+      ],
       selectedLang: 'en'
     }
   }
@@ -98,11 +105,17 @@ export default {
   color: #79c7ff;
   cursor: pointer;
 }
+.nav-item:last-child {
+  margin-right: 1rem;
+}
 .language-selector {
   display: flex;
   flex-direction: column;
   color: white;
   padding-right: 0.5rem;
   margin-top: 0.5rem;
+}
+#lang-select {
+  width: fit-content;
 }
 </style>

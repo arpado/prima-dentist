@@ -1,5 +1,92 @@
 {
-    "title": "Prima Dentist",
-    "text": "The place where you can lay back!",
-    "button": "Apply for appointment"
+    "navbar": {
+        "home": "Home",
+        "aboutUs": "About Us",
+        "services": "Our Services",
+        "staff": "Our Staff",
+        "contacts": "Contacts"
+    },
+    "home": {
+        "title": "Prima Dentist",
+        "text": "The place where you can lay back!",
+        "button": "Apply for appointment"
+    },
+    "introduction": {
+        "title": "PRIMA DENTIST AND DENTAL OFFICE",
+        "text": "Our team of experienced, highly qualified dentists is waiting for you in our dental office in Szeged, next to the park. Our dental clinic offers comprehensive dental care: in addition to general and aesthetic dental treatments, orthodontics and oral surgery (implantation, wisdom tooth removal) are also available. Dental treatments are performed using only premium dental materials and the most modern dental equipment possible. It is true for all members of the team of our dental office that for us, providing dental care is not just a job, but also a profession. Our goal is for all our patients to leave us satisfied and with a confident smile. A Dentistry in Szeged, where your problem is fixed quickly, painlessly and to a high professional standard.",
+        "button": "Apply for appointment"
+    },
+    "features": {
+        "title": "Our services",
+        "item1": {
+            "title": "Dental Retaining Treatment",
+            "text": "During our tooth-retaining treatments, we do everything in addition to eliminating pain so that you can use your teeth for many years to come without any problems."
+        },
+        "item2": {
+            "title": "Dentures",
+            "text": "With dental restorations - be it bridges, crowns, removable dentures or implants - we restore your self-confidence and, last but not least, your ability to chew."
+        },
+        "item3": {
+            "title": "Aesthetic intervention",
+            "text": "We not only whiten healthy teeth, but we also whiten root-treated teeth, and we also put on dental jewelry chosen by the patient with medical expertise."
+        }
+    },
+    "resources": {
+        "title": "Why choose us?",
+        "item1": {
+            "title": "Evidence-based dentistry",
+            "text": "Dental care cannot be based solely on the dentist's individual experience, but continuous learning and up-to-date knowledge of the latest dental research available are essential."
+        },
+        "item2": {
+            "title": "Full information",
+            "text": "We prepare a complex treatment plan based on x-rays and - if necessary - photos of the face and oral cavity, as well as impressions, and provide comprehensive, detailed information on the course and price of possible dental treatments."
+        },
+        "item3": {
+            "title": "Evidence-based dentistry",
+            "text": "Dental care cannot be based solely on the dentist's individual experience, but continuous learning and up-to-date knowledge of the latest dental research available are essential."
+        } 
+    },
+    "staff": {
+        "title": "The Prima dentistry team",
+        "doctor1": {
+            "name": "Pál Kis",
+            "title": "Dentist",
+            "text": "I try to perform the tasks assigned to me devotedly, conscientiously and precisely."
+        },
+        "doctor2": {
+            "name": "Anna Kovács",
+            "title": "Dentist",
+            "text": "I am committed to providing an outstanding level of dental care."
+        }
+    },
+    "contacts": {
+        "title1": "Our Contacts",
+        "email": {
+            "label": "Email",
+            "value": "email(at)email.com"
+        },
+        "telephone": {
+            "label": "Telephone",
+            "value": "(000) 000-0000"
+        },
+        "address": {
+            "label": "Address",
+            "street": "Imaginary Street 3.",
+            "postCode": "1200",
+            "city": "Szeged",
+            "country": "Hungary"
+        },
+        "title2": "Book Appointment",
+        "form": {
+            "name": "Name",
+            "email": "Your Email Address",
+            "message": "Your Message",
+            "placeholder": "Please Fill This Field!",
+            "button": "Send Message"
+        }
+    },
+    "footer": {
+        "findUs": "Find Us On",
+        "madeBy": "Image design, website design: JoMagam &copy; 2022"
+    }
 }

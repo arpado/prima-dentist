@@ -4,9 +4,9 @@
       <div class="overlay"></div>
     </div>
     <div class="caption text-center">
-      <h1 ref="title">{{ $t('title') }}</h1>
-      <h3 ref="subtitle">{{ $t('text') }}</h3>
-      <a ref="applicationButton" href="#contact" class="btn btn-secondary btn-md">{{ $t('button') }}</a>
+      <h1 ref="title">{{ $t('home.title') }}</h1>
+      <h3 ref="subtitle">{{ $t('home.text') }}</h3>
+      <a ref="applicationButton" href="#contact" class="btn btn-secondary btn-md">{{ $t('home.button') }}</a>
     </div>
   </div>
 </template>

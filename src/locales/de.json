@@ -1,0 +1,92 @@
+{
+    "navbar": {
+        "home": "Home",
+        "aboutUs": "Über uns",
+        "services": "Dienstleistungen",
+        "staff": "Angestelten",
+        "contacts": "Kontakte"
+    },
+    "home": {
+        "title": "Prima Zahnarzt",
+        "text": "Der Ort, an dem Sie sich zurücklehnen können!",
+        "button": "Termin Beantragen"
+    },
+    "introduction": {
+        "title": "PRIMA ZAHNARZT UND ZAHNARZTPRAXIS",
+        "text": "Unser Team aus erfahrenen, hochqualifizierten Zahnärzten erwartet Sie in unserer Zahnarztpraxis in Szeged, direkt neben dem Park. Unsere Zahnklinik bietet eine umfassende zahnärztliche Versorgung: Neben allgemeinen und ästhetischen Zahnbehandlungen stehen auch Kieferorthopädie und Oralchirurgie (Implantation, Weisheitszahnentfernung) zur Verfügung. Für zahnärztliche Behandlungen werden ausschließlich hochwertige Zahnmaterialien und modernste zahnmedizinische Geräte verwendet. Für alle Mitarbeiter unserer Zahnarztpraxis gilt, dass die zahnärztliche Versorgung für uns nicht nur ein Job, sondern auch ein Beruf ist. Unser Ziel ist es, dass alle unsere Patienten uns zufrieden und mit einem selbstbewussten Lächeln verlassen. Eine Zahnmedizin in Szeged, wo Ihr Problem schnell, schmerzlos und auf hohem professionellem Niveau behoben wird.",
+        "button": "Termin Beantragen"
+    },
+    "features": {
+        "title": "Unsere Dienstleistungen",
+        "item1": {
+            "title": "Zahnerhaltende Behandlung",
+            "text": "Bei unseren zahnerhaltenden Behandlungen tun wir neben der Schmerzbeseitigung alles, damit Sie Ihre Zähne viele Jahre lang problemlos nutzen können."
+        },
+        "item2": {
+            "title": "Zahnersatz",
+            "text": "Mit Zahnrestaurationen – seien es Brücken, Kronen, herausnehmbarer Zahnersatz oder Implantate – stellen wir Ihr Selbstvertrauen und nicht zuletzt Ihre Kaufähigkeit wieder her."
+        },
+        "item3": {
+            "title": "Ästhetischer Eingriff/Intervention",
+            "text": "Wir bleichen nicht nur gesunde Zähne, sondern auch wurzelbehandelte Zähne auf und tragen mit medizinischem Fachwissen vom Patienten selbst ausgewählten Zahnschmuck auf."
+        }
+    },
+    "resources": {
+        "title": "Warum uns wählen?",
+        "item1": {
+            "title": "Evidenzbasierte Zahnheilkunde",
+            "text": "Die zahnärztliche Versorgung kann nicht allein auf der individuellen Erfahrung des Zahnarztes basieren, vielmehr sind kontinuierliches Lernen und aktuelle Kenntnisse der neuesten zahnmedizinischen Forschung unerlässlich."
+        },
+        "item2": {
+            "title": "Volle Information",
+            "text": "Wir erstellen einen komplexen Behandlungsplan auf Basis von Röntgenaufnahmen und ggf. Fotos von Gesicht und Mundhöhle sowie Abdrücken und informieren umfassend und detailliert über Ablauf und Preis möglicher zahnärztlicher Behandlungen."
+        },
+        "item3": {
+            "title": "Evidenzbasierte Zahnheilkunde",
+            "text": "Die zahnärztliche Versorgung kann nicht allein auf der individuellen Erfahrung des Zahnarztes basieren, vielmehr sind kontinuierliches Lernen und aktuelle Kenntnisse der neuesten zahnmedizinischen Forschung unerlässlich."
+        } 
+    },
+    "staff": {
+        "title": "Das Team der Prima-Zahnmedizin",
+        "doctor1": {
+            "name": "Pál Kis",
+            "title": "Zahnarzt",
+            "text": "Ich versuche, die mir übertragenen Aufgaben hingebungsvoll, gewissenhaft und präzise auszuführen."
+        },
+        "doctor2": {
+            "name": "Anna Kovács",
+            "title": "Zahnarztin",
+            "text": "Es liegt mir am Herzen, eine erstklassige zahnmedizinische Versorgung zu bieten."
+        }
+    },
+    "contacts": {
+        "title1": "Unsere Kontakte",
+        "email": {
+            "label": "Email",
+            "value": "email(at)email.com"
+        },
+        "telephone": {
+            "label": "Telefon",
+            "value": "(000) 000-0000"
+        },
+        "address": {
+            "label": "Adresse",
+            "street": "Imaginäre Straße 3.",
+            "postCode": "1200",
+            "city": "Szeged",
+            "country": "Ungarn"
+        },
+        "title2": "Termin verabreden",
+        "form": {
+            "name": "Name",
+            "email": "Ihre E-Mail-Adresse",
+            "message": "Ihre Nachricht",
+            "placeholder": "Bitte füllen Sie dieses Feld aus!",
+            "button": "Nachricht senden"
+        }
+    },
+    "footer": {
+        "findUs": "Finden Sie uns auf",
+        "madeBy": "Website-Design: JoMagam &copy; 2022"
+    }
+}

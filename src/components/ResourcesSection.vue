@@ -3,13 +3,13 @@
     <div class="fixed-background">
       <div class="textbox row text-center" ref="resourcesContainer">
         <div class="col-md-12">
-          <h3 class="heading">MIÉRT VÁLASSZON MINKET?</h3>
+          <h3 class="heading">{{ $t('resources.title') }}</h3>
           <div class="heading-underline"></div>
         </div>
         <div class="resource col-md-4" v-for="(resource, index) in resources" :key="index" ref="resourceBlocks">
-          <h3>{{ resource.title }}</h3>
+          <h3>{{ $t(resource.title) }}</h3>
           <i :class="resource.iconClassList"></i>
-          <p>{{ resource.text }}</p>
+          <p>{{ $t(resource.text) }}</p>
         </div>
       </div>
       <div class="overlay"></div>
@@ -26,21 +26,18 @@ export default {
     return {
       resources: [
         {
-          title: 'Bizonyítékokon alapuló fogorvoslás',
-          text:
-            'A fogászati ellátást nem lehet kizárólag a fogorvos egyéni tapasztalatára építeni, hanem elengedhetetlen a folyamatos tanulás és a rendelkezésre álló legfrisseb fogászati kutatások naprakész ismerete.',
+          title: 'resources.item1.title',
+          text: 'resources.item1.text',
           iconClassList: 'fas fas fa-star fa-3x'
         },
         {
-          title: 'Teljeskörű tájékoztatás',
-          text:
-            'Röntgenfelvételek és -ha szükséges- arc- és szájüregi fotók, valamint lenyomatok alapján komplex kezelési tervet készítünk és mindenre kiterjedő, részletes tájékoztatást nyújtunk a lehetséges fogorvosi kezelések menetére, árára vonatkozóan.',
+          title: 'resources.item2.title',
+          text: 'resources.item2.text',
           iconClassList: 'fas fa-smile fa-3x'
         },
         {
-          title: 'Bizonyítékokon alapuló fogorvoslás',
-          text:
-            'A fogászati ellátást nem lehet kizárólag a fogorvos egyéni tapasztalatára építeni, hanem elengedhetetlen a folyamatos tanulás és a rendelkezésre álló legfrisseb fogászati kutatások naprakész ismerete.',
+          title: 'resources.item3.title',
+          text: 'resources.item3.text',
           iconClassList: 'fas fa-syringe fa-3x'
         }
       ]

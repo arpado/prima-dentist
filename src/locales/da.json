@@ -1,0 +1,92 @@
+{
+    "navbar": {
+        "home": "Home",
+        "aboutUs": "Om os",
+        "services": "Vores tjenester",
+        "staff": "Vores personale",
+        "contacts": "Kontakt"
+    },
+    "home": {
+        "title": "Prima tandlæge",
+        "text": "Stedet, hvor du kan læne dig tilbage!",
+        "button": "Ansøg om tidsbestilling"
+    },
+    "introduction": {
+        "title": "PRIMA TANDLÆGE OG TANDLÆGEKONTOR",
+        "text": "Vores team af erfarne, højt kvalificerede tandlæger venter på dig på vores tandlægekontor i Szeged, ved siden af ​​parken. Vores tandklinik tilbyder omfattende tandpleje: Ud over almene og æstetiske tandbehandlinger er der også mulighed for tandregulering og mundkirurgi (implantation, fjernelse af visdomstand). Tandbehandlinger udføres udelukkende ved brug af premium tandmaterialer og det mest moderne tandudstyr som muligt. Det gælder for alle medlemmer af teamet på vores tandlægekontor, at for os er tandpleje ikke kun et job, men også et erhverv. Vores mål er, at alle vores patienter skal efterlade os tilfredse og med et selvsikkert smil. En tandpleje i Szeged, hvor dit problem bliver løst hurtigt, smertefrit og til en høj faglig standard.",
+        "button": "Ansøg om tidsbestilling"
+    },
+    "features": {
+        "title": "Vores tjenester",
+        "item1": {
+            "title": "Tandfastholdelsesbehandling",
+            "text": "Under vores tandfastholdelsesbehandlinger gør vi alt udover at fjerne smerter, så du uden problemer kan bruge dine tænder i mange år fremover."
+        },
+        "item2": {
+            "title": "Tandproteser",
+            "text": "Med tandrestaureringer - det være sig broer, kroner, aftagelige proteser eller implantater - genopretter vi din selvtillid og sidst men ikke mindst din evne til at tygge."
+        },
+        "item3": {
+            "title": "Æstetisk indgreb",
+            "text": "Vi bleger ikke kun sunde tænder, men vi bleger også rodbehandlede tænder, og vi sætter også tandsmykker på udvalgt af patienten med medicinsk ekspertise."
+        }
+    },
+    "resources": {
+        "title": "Hvorfor vælge os?",
+        "item1": {
+            "title": "Evidensbaseret tandpleje",
+            "text": "Tandplejen kan ikke udelukkende baseres på tandlægens individuelle erfaring, men løbende læring og opdateret viden om den nyeste tandlægeforskning er afgørende."
+        },
+        "item2": {
+            "title": "Fuld information",
+            "text": "Vi udarbejder en kompleks behandlingsplan baseret på røntgenbilleder og - om nødvendigt - fotos af ansigt og mundhule samt aftryk og giver omfattende, detaljeret information om forløb og pris på mulige tandbehandlinger."
+        },
+        "item3": {
+            "title": "Evidensbaseret tandpleje",
+            "text": "Tandplejen kan ikke udelukkende baseres på tandlægens individuelle erfaring, men løbende læring og opdateret kendskab til den nyeste tandlægeforskning er afgørende."
+        } 
+    },
+    "staff": {
+        "title": "Prima tandlægeteam",
+        "doctor1": {
+            "name": "Pál Kis",
+            "title": "Tandlæge",
+            "text": "Jeg forsøger at udføre de opgaver, der er tildelt mig, hengivent, samvittighedsfuldt og præcist."
+        },
+        "doctor2": {
+            "name": "Anna Kovács",
+            "title": "Tandlæge",
+            "text": "Jeg er forpligtet til at yde en enestående tandpleje."
+        }
+    },
+    "contacts": {
+        "title1": "Vores kontakter",
+        "email": {
+            "label": "Email",
+            "value": "email(at)email.com"
+        },
+        "telephone": {
+            "label": "Telefon",
+            "value": "(000) 000-0000"
+        },
+        "address": {
+            "label": "Adresse",
+            "street": "Imaginært gade 3.",
+            "postCode": "1200",
+            "city": "Szeged",
+            "country": "Ungarn"
+        },
+        "title2": "Bestil tid",
+        "form": {
+            "name": "Navn",
+            "email": "Din email adresse",
+            "message": "Din besked",
+            "placeholder": "Udfyld venligst dette felt!",
+            "button": "Send besked"
+        }
+    },
+    "footer": {
+        "findUs": "Find os på",
+        "madeBy": "Website design: JoMagam &copy; 2022"
+    }
+}

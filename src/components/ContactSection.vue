@@ -2,17 +2,17 @@
   <div id="contact" class="offset">
     <div class="jumbotron">
       <div class="col-md-12 text-center">
-        <h3 class="heading">Elérhetőségeink:</h3>
+        <h3 class="heading">{{ $t('contacts.title1') }}:</h3>
         <div class="heading-underline"></div>
       </div>
       <div class="contacts-container">
         <div class="contacts-section">
           <div>
-            <p>Email:<br/>email@email.com</p>
-            <p>Telefon:<br/>0000-0000</p>
+            <p>{{ $t('contacts.email.label') }}:<br/>{{ $t('contacts.email.value') }}</p>
+            <p>{{ $t('contacts.telephone.label') }}:<br/>{{ $t('contacts.telephone.value') }}</p>
           </div>
           <div>
-            <p>Cim:<br/>Kital'lt utca 3.,<br />1200<br />Syeged, Hungary</p>
+            <p>{{ $t('contacts.address.label') }}:<br/>{{ $t('contacts.address.street') }},<br />{{ $t('contacts.address.postCode') }},<br />{{ $t('contacts.address.city') }}, {{ $t('contacts.address.country') }}</p>
           </div>
         </div>
         <iframe
@@ -29,31 +29,31 @@
       </div>
     </div>
     <div class="form-section col-md-12 text-center">
-      <h3 class="heading">Online bejelentkezés</h3>
+      <h3 class="heading">{{ $t('contacts.title2') }}</h3>
       <div class="heading-underline"></div>
       <div class="col-md-12 text-center">
         <form @submit.prevent="sendMessage" @reset="onReset">
           <div class="form-unit">
-            <label for="name-field">Név: </label>
-            <input id="name-field" placeholder="Kérjük töltse ki ezt a mezőt!" v-model="name" />
+            <label for="name-field">{{ $t('contacts.form.name') }}:</label>
+            <input id="name-field" :placeholder="$t('contacts.form.placeholder')" v-model="name" />
           </div>
 
           <div class="form-unit">
-            <label for="email-field">Email: </label>
-            <input id="email-field" placeholder="Kérjük töltse ki ezt a mezőt!" v-model="email" />
+            <label for="email-field">{{ $t('contacts.form.email') }}:</label>
+            <input id="email-field" :placeholder="$t('contacts.form.placeholder')" v-model="email" />
           </div>
 
           <div class="form-unit">
-            <label for="message-field">Üzenet: </label>
+            <label for="message-field">{{ $t('contacts.form.message') }}:</label>
             <textarea
               id="message-field"
-              placeholder="Kérjük töltse ki ezt a mezőt!"
+              :placeholder="$t('contacts.form.placeholder')"
               rows="10"
               v-model="message"
             ></textarea>
           </div>
 
-          <button type="submit" class="submit-btn btn btn-secondary btn-md">Küldés</button>
+          <button type="submit" class="submit-btn btn btn-secondary btn-md">{{ $t('contacts.form.button') }}</button>
         </form>
       </div>
     </div>

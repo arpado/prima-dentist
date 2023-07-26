@@ -5,6 +5,8 @@ import { createI18n } from 'vue-i18n';
 import App from './App.vue'
 import en from './locales/en.json'
 import hu from './locales/hu.json'
+import de from './locales/de.json'
+import da from './locales/da.json'
 
 import Vue3Toastify from 'vue3-toastify';
 import 'vue3-toastify/dist/index.css';
@@ -15,7 +17,9 @@ const i18n = createI18n({
   fallbackLocale: 'en', // Set the fallback locale
   messages: {
     en, // Import English translations
-    hu // Import Hungarian translations
+    hu, // Import Hungarian translations
+    de, // Import German translations
+    da // Import Danish translations
   }
 });
 
