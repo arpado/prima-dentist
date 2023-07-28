@@ -60,7 +60,7 @@ export default {
   },
   methods: {
     getPic(pic) {
-      return `/src/assets/images/${pic}`
+      return `/images/${pic}`
     }
   },
   mounted() {

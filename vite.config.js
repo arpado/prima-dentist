@@ -1,6 +1,7 @@
 import { fileURLToPath, URL } from 'node:url'
 import { resolve, dirname } from 'node:path'
 import { defineConfig } from 'vite'
+// import path from 'path'
 import vue from '@vitejs/plugin-vue'
 import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
 
@@ -16,6 +17,9 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
+      // '@': path.resolve(__dirname, './src'),
+      // '@assets': path.resolve(__dirname, './src/assets'),
+      // '@components': path.resolve(__dirname, './src/components'),
     }
   }
 })
