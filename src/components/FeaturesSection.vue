@@ -14,7 +14,10 @@
           ref="features"
         >
           <!-- <div class=""> -->
-          <i :class="feature.iconClassList" :data-fa-transform="feature.dataFaTransform"></i>
+          <!-- <i :class="feature.iconClassList" :data-fa-transform="feature.dataFaTransform"></i> -->
+          <div class="image-container">
+            <img :src="getPic(feature.pic)" alt="">
+          </div>
           <h3>{{ $t(feature.title) }}</h3>
           <p>{{ $t(feature.text) }}</p>
           <!-- </div> -->
@@ -36,21 +39,29 @@ export default {
           title: 'features.item1.title',
           text: 'features.item1.text',
           iconClassList: 'fas fas fa-star fa-4x',
-          dataFaTransform: 'shrink-4.5 up-4.5'
+          dataFaTransform: 'shrink-4.5 up-4.5',
+          pic: "service1.jpg"
         },
         {
           title: 'features.item2.title',
           text: 'features.item1.text',
           iconClassList: 'fas fa-smile fa-4x',
-          dataFaTransform: 'shrink-4.5 up-4.5'
+          dataFaTransform: 'shrink-4.5 up-4.5',
+          pic: "service2.jpg"
         },
         {
           title: 'features.item3.title',
           text: 'features.item1.text',
           iconClassList: 'fas fa-syringe fa-4x',
-          dataFaTransform: 'shrink-4 up-5'
+          dataFaTransform: 'shrink-4 up-5',
+          pic: "service3.jpg"
         }
       ]
+    }
+  },
+  methods: {
+    getPic(pic) {
+      return `/src/assets/images/${pic}`
     }
   },
   mounted() {
@@ -92,10 +103,25 @@ export default {
 }
 .feature {
   display: grid;
-  grid-template-rows: 120px 70px 1fr;
+  grid-template-rows:250px 70px 1fr;
   text-align: center;
   opacity: 0;
   max-width: 600px;
+  gap: 1rem;
+}
+.image-container {
+  /* width: 100px; */
+  height: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px 0 black;
+}
+.feature > .image-container > img {
+  /* object-fit: scale-down; */
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .feature > svg {
   margin: auto;
@@ -104,7 +130,7 @@ export default {
   font-size: var(--font-title-md);
   font-weight: bold;
   text-transform: uppercase;
-  padding-bottom: 0.4rem;
+  margin: auto;
 }
 .feature p {
   font-size: 1.1rem;
