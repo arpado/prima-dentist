@@ -67,17 +67,12 @@ export default {
         // threshold: 1
       }
     )
+    
+    const sectionArray = [this.$refs.home.$el, this.$refs.introduction.$el, this.$refs.features.$el, this.$refs.resources.$el, this.$refs.staff.$el, this.$refs.contact.$el]
 
-    // this.$refs.forEach(section => {
-    //   observer.observe(section)
-    // })
-    observer.observe(this.$refs.home.$el)
-    observer.observe(this.$refs.introduction.$el)
-    observer.observe(this.$refs.features.$el)
-    observer.observe(this.$refs.resources.$el)
-    observer.observe(this.$refs.staff.$el)
-    observer.observe(this.$refs.contact.$el)
-    // observer.observe([this.$refs.home.$el, this.$refs.introduction.$el, this.$refs.features.$el, this.$refs.resources.$el, this.$refs.staff.$el, this.$refs.contact.$el])
+    sectionArray.forEach(elem => {
+      observer.observe(elem)
+    })
   }
 }
 </script>

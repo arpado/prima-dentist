@@ -3,7 +3,6 @@
     <a href="#home" class="navbar-brand">
       <img src="@/assets/images/logo.png" alt="Brand" />
     </a>
-    {{ currentSection }}
     <button
       type="button"
       class="navbar-toggler"
