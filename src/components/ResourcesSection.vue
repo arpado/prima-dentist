@@ -1,5 +1,5 @@
 <template>
-  <div id="resouces" class="offset">
+  <div id="resources" class="offset">
     <div class="fixed-background">
       <div class="textbox row text-center" ref="resourcesContainer">
         <div class="col-md-12">
@@ -61,7 +61,7 @@ export default {
 </script>
 
 <style scoped>
-#resouces:before {
+#resources:before {
   display: block;
   content: '';
   height: 3.6rem;

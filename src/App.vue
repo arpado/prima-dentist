@@ -1,12 +1,12 @@
 <template>
-  <main id="app">
-    <HeaderSection @change-locale="changeLocale" />
-    <HomeSection />
-    <IntroductionSection />
-    <FeaturesSection />
-    <ResourcesSection />
-    <StaffSection />
-    <ContactSection />
+  <main id="app" ref="app">
+    <HeaderSection @change-locale="changeLocale" :currentSection="currentSection" />
+    <HomeSection ref="home" />
+    <IntroductionSection ref="introduction" />
+    <FeaturesSection ref="features" />
+    <ResourcesSection ref="resources" />
+    <StaffSection ref="staff" />
+    <ContactSection ref="contact" />
     <FooterSection />
   </main>
 </template>
@@ -34,6 +34,11 @@ export default {
     ContactSection,
     FooterSection
   },
+  data() {
+    return {
+      currentSection: null
+    }
+  },
   setup() {
     const { t, locale, setLocale } = useI18n()
 
@@ -46,6 +51,33 @@ export default {
       locale,
       changeLocale
     }
+  },
+  mounted() {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.intersectionRatio > 0) {
+            this.currentSection = entry.target.getAttribute('id')
+          }
+        })
+      },
+      {
+        // root: this.$refs.app,
+        rootMargin: '-60px 0px -80% 0px',
+        // threshold: 1
+      }
+    )
+
+    // this.$refs.forEach(section => {
+    //   observer.observe(section)
+    // })
+    observer.observe(this.$refs.home.$el)
+    observer.observe(this.$refs.introduction.$el)
+    observer.observe(this.$refs.features.$el)
+    observer.observe(this.$refs.resources.$el)
+    observer.observe(this.$refs.staff.$el)
+    observer.observe(this.$refs.contact.$el)
+    // observer.observe([this.$refs.home.$el, this.$refs.introduction.$el, this.$refs.features.$el, this.$refs.resources.$el, this.$refs.staff.$el, this.$refs.contact.$el])
   }
 }
 </script>

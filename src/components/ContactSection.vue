@@ -7,12 +7,17 @@
       </div>
       <div class="contacts-container">
         <div class="contacts-section">
+          <h3>Find Us</h3>
           <div>
-            <p>{{ $t('contacts.email.label') }}:<br/>{{ $t('contacts.email.value') }}</p>
-            <p>{{ $t('contacts.telephone.label') }}:<br/>{{ $t('contacts.telephone.value') }}</p>
+            <p>{{ $t('contacts.email.label') }}:<br />{{ $t('contacts.email.value') }}</p>
+            <p>{{ $t('contacts.telephone.label') }}:<br />{{ $t('contacts.telephone.value') }}</p>
           </div>
           <div>
-            <p>{{ $t('contacts.address.label') }}:<br/>{{ $t('contacts.address.street') }},<br />{{ $t('contacts.address.postCode') }},<br />{{ $t('contacts.address.city') }}, {{ $t('contacts.address.country') }}</p>
+            <p>
+              {{ $t('contacts.address.label') }}:<br />{{ $t('contacts.address.street') }},<br />{{
+                $t('contacts.address.postCode')
+              }},<br />{{ $t('contacts.address.city') }}, {{ $t('contacts.address.country') }}
+            </p>
           </div>
         </div>
         <iframe
@@ -40,7 +45,11 @@
 
           <div class="form-unit">
             <label for="email-field">{{ $t('contacts.form.email') }}:</label>
-            <input id="email-field" :placeholder="$t('contacts.form.placeholder')" v-model="email" />
+            <input
+              id="email-field"
+              :placeholder="$t('contacts.form.placeholder')"
+              v-model="email"
+            />
           </div>
 
           <div class="form-unit">
@@ -53,7 +62,9 @@
             ></textarea>
           </div>
 
-          <button type="submit" class="submit-btn btn btn-secondary btn-md">{{ $t('contacts.form.button') }}</button>
+          <button type="submit" class="submit-btn btn btn-secondary btn-md">
+            {{ $t('contacts.form.button') }}
+          </button>
         </form>
       </div>
     </div>
@@ -150,6 +161,12 @@ export default {
   flex-wrap: wrap;
   font-size: var(--font-text-md);
   margin: 2rem auto;
+  border: 4px solid #79c7ff;
+  padding: 1rem 3rem;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 1px 1px 5px 0 black;
+  max-width: fit-content;
 }
 .contacts-section > div {
   width: 250px;
@@ -209,7 +226,7 @@ form textarea {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: var(--font-text-l)
+    font-size: var(--font-text-l);
   }
 }
 </style>

@@ -3,6 +3,7 @@
     <a href="#home" class="navbar-brand">
       <img src="@/assets/images/logo.png" alt="Brand" />
     </a>
+    {{ currentSection }}
     <button
       type="button"
       class="navbar-toggler"
@@ -13,12 +14,12 @@
     </button>
     <div class="collpase navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item" v-for="(link, index) in links" :key="index">
-          <a :href="link.href" class="nav-link">{{ $t(link.name) }}</a>
+        <li class="nav-item" v-for="(link, index) in links" :key="index" ref="navLink">
+          <a :href="link.href" :class="[ link.section.includes(currentSection) ? 'link-active' : '', 'nav-link']">{{ $t(link.name) }}</a>
         </li>
       </ul>
       <div class="language-selector">
-        <label for="lang-select">Language:</label>
+        <label for="lang-select"><i class="fa fa-light fa-globe fa-2x"></i></label>
         <select
           name=""
           id="lang-select"
@@ -42,28 +43,34 @@ export default {
       links: [
         {
           name: 'navbar.home',
-          href: '#home'
+          href: '#home',
+          section: ['home']
         },
         {
           name: 'navbar.aboutUs',
-          href: '#introduction'
+          href: '#introduction',
+          section: ['introduction']
         },
         {
           name: 'navbar.services',
-          href: '#features'
+          href: '#features',
+          section: ['features', 'resources']
         },
         {
           name: 'navbar.staff',
-          href: '#staff'
+          href: '#staff',
+          section: ['staff']
         },
         {
           name: 'navbar.contacts',
-          href: '#contact'
-        },
+          href: '#contact',
+          section: ['contact']
+        }
       ],
-      selectedLang: 'en'
+      selectedLang: 'en',
     }
-  }
+  },
+  props: ['currentSection']
 }
 </script>
 
@@ -110,12 +117,30 @@ export default {
 }
 .language-selector {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
+  align-items: center;
   color: white;
   padding-right: 0.5rem;
   margin-top: 0.5rem;
 }
+.language-selector label {
+  margin: auto 1rem;
+}
+.language-selector select {
+  height: fit-content;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+.language-selector select option {
+  background-color: rgba(0, 0, 0, 0.7);
+}
 #lang-select {
   width: fit-content;
+  border-radius: 10px;
+  padding: 0.1rem;
+}
+.link-active {
+  color: #79c7ff !important;
 }
 </style>
